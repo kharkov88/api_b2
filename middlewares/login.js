@@ -19,7 +19,7 @@ export default function (req, res) {
                 name: user.username,
                 id: user.id
             };
-            const token = jwt.sign(payload, 'your_jwt_secret',{expiresIn: 1200});
+            const token = jwt.sign(payload, process.env.SECRET, {expiresIn: 1200});
             return res.json({user, token, info});
         });
     })(req, res);

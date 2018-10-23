@@ -1,6 +1,6 @@
 'use strict';
 export default (sequelize, DataTypes) => {
-    const Template = sequelize.define('Template', {
+    const Template = sequelize.define('template', {
         name: {
             type: DataTypes.STRING
         },
